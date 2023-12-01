@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.MemberController">
+   <children>
+      <MenuBar layoutY="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Welcome to SportMate!">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.2952008928571429" layoutX="36.0" layoutY="98.0" prefHeight="337.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+        <items>
+          <AnchorPane minHeight="271.0" minWidth="0.0" prefHeight="297.0" prefWidth="173.0">
+               <children>
+                  <Button fx:id="button_members" layoutY="128.0" mnemonicParsing="false" onAction="#goMember" prefHeight="25.0" prefWidth="173.0" text="MEMBERS" />
+                  <Button fx:id="button_teams" layoutY="153.0" mnemonicParsing="false" onAction="#goTeam" prefHeight="25.0" prefWidth="173.0" text="TEAMS" />
+                  <Button fx:id="button_event" layoutY="178.0" mnemonicParsing="false" onAction="#goEvent" prefHeight="25.0" prefWidth="173.0" text="EVENTS" />
+                  <Button layoutY="342.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="LOGOUT" onAction="#logout" />
+                  <Button fx:id="dashboard" layoutY="103.0" mnemonicParsing="false" onAction="#goDashboard" prefHeight="25.0" prefWidth="173.0" text="DASHBOARD" />
+                  <Button fx:id="announcement" layoutY="203.0" mnemonicParsing="false" onAction="#goAnnouncement" prefHeight="25.0" prefWidth="173.0" text="ANNOUNCEMENT" />
+                  <Button fx:id="gallery" layoutY="228.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="GALLERY" onAction="#goGallery" />
+                  <ImageView fitHeight="97.0" fitWidth="81.0" layoutX="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@—Pngtree—cartoon%20sports%20fitness%20equipment_3594503.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="77.0" prefHeight="17.0" prefWidth="103.0" text="Administrator: 123" textAlignment="CENTER" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tableViewM" layoutX="14.0" layoutY="27.0" prefHeight="335.0" prefWidth="418.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="name" prefWidth="75.0" text="NAME" />
+                      <TableColumn fx:id="age" prefWidth="31.3333740234375" text="AGE" />
+                        <TableColumn fx:id="gender" prefWidth="66.66674041748047" text="GENDER" />
+                        <TableColumn fx:id="email" prefWidth="77.33331298828125" text="EMAIL" />
+                        <TableColumn fx:id="phone" prefWidth="116.66664123535156" text="PHONE" />
+                        <TableColumn fx:id="team" prefWidth="48.66668701171875" text="TEAM" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="addM" layoutX="255.0" layoutY="340.0" mnemonicParsing="false" onAction="#showAddM" text="ADD" />
+                  <Button fx:id="deleteM" layoutX="358.0" layoutY="340.0" mnemonicParsing="false" onAction="#deleteMember" text="DELETE" />
+                  <Button fx:id="editM" layoutX="307.0" layoutY="340.0" mnemonicParsing="false" onAction="#editMember" text="EDIT" />
+                  <Button fx:id="refresh" layoutX="5.0" layoutY="340.0" mnemonicParsing="false" onAction="#refresh" text="REFRESH" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

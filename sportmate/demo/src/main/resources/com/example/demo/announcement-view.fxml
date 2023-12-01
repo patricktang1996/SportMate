@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.AnnouncementController">
+    <children>
+        <MenuBar layoutY="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Welcome to SportMate!">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.2952008928571429" layoutX="36.0" layoutY="98.0" prefHeight="337.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+            <items>
+                <AnchorPane minHeight="271.0" minWidth="0.0" prefHeight="297.0" prefWidth="173.0">
+                    <children>
+                        <Button fx:id="button_members" layoutY="128.0" mnemonicParsing="false" onAction="#goMember" prefHeight="25.0" prefWidth="173.0" text="MEMBERS" />
+                        <Button fx:id="button_teams" layoutY="153.0" mnemonicParsing="false" onAction="#goTeam" prefHeight="25.0" prefWidth="173.0" text="TEAMS" />
+                        <Button fx:id="button_event" layoutY="178.0" mnemonicParsing="false" onAction="#goEvent" prefHeight="25.0" prefWidth="173.0" text="EVENTS" />
+                        <Button layoutY="342.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="173.0" text="LOGOUT" />
+                        <Button fx:id="dashboard" layoutY="103.0" mnemonicParsing="false" onAction="#goDashboard" prefHeight="25.0" prefWidth="173.0" text="DASHBOARD" />
+                        <Button fx:id="announcement" layoutY="203.0" mnemonicParsing="false" onAction="#goAnnouncement" prefHeight="25.0" prefWidth="173.0" text="ANNOUNCEMENT" />
+                        <Button fx:id="gallery" layoutY="228.0" mnemonicParsing="false" onAction="#goGallery" prefHeight="25.0" prefWidth="173.0" text="GALLERY" />
+                        <ImageView fitHeight="97.0" fitWidth="81.0" layoutX="46.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@—Pngtree—cartoon%20sports%20fitness%20equipment_3594503.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="35.0" layoutY="77.0" prefHeight="17.0" prefWidth="103.0" text="Administrator: 123" textAlignment="CENTER" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Label layoutX="22.0" layoutY="14.0" prefHeight="42.0" prefWidth="282.0" text="Announcement" textFill="#ff6200">
+                            <font>
+                                <Font name="Franklin Gothic Heavy Italic" size="36.0" />
+                            </font>
+                        </Label>
+                        <Button layoutX="219.0" layoutY="305.0" mnemonicParsing="false" text="Edit" onAction="#editAnnouncement"/>
+                        <Button layoutX="266.0" layoutY="305.0" mnemonicParsing="false" text="Delete" onAction="#deleteAnnouncement"/>
+                        <Button layoutX="171.0" layoutY="305.0" mnemonicParsing="false" text="Add" onAction="#addAnnouncement"/>
+                        <Button layoutX="121.0" layoutY="305.0" mnemonicParsing="false" text="Next" onAction="#nextAnnouncement"/>
+                        <Button layoutX="47.0" layoutY="305.0" mnemonicParsing="false" text="Previous" onAction="#previousAnnouncement"/>
+                  <TextArea layoutX="47.0" layoutY="93.0" prefHeight="200.0" prefWidth="323.0" text="Let's play soccer together!&#10;&#10;Date: &#10;&#10;Location: &#10;&#10;Best regard!&#10;&#10;Soccer Association&#10;&#10;" />
+                  <Label layoutX="47.0" layoutY="69.0" prefHeight="17.0" prefWidth="133.0" text="New Game! Join Us!">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="RIGHT" layoutX="300.0" layoutY="69.0" prefHeight="17.0" prefWidth="70.0" text="08.08.2024">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="325.0" layoutY="305.0" mnemonicParsing="false" text="Email" onAction="#sendEmail"/>
+
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

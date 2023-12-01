@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="241.0" prefWidth="236.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.edit.EventEditController">
+   <children>
+      <Label layoutX="20.0" layoutY="44.0" text="Name" />
+      <Label layoutX="21.0" layoutY="78.0" text="Type" />
+      <Label layoutX="21.0" layoutY="146.0" text="Time" />
+      <Label layoutX="21.0" layoutY="112.0" text="Location" />
+      <TextField fx:id="eventName" editable="false" layoutX="65.0" layoutY="40.0" />
+      <TextField fx:id="eventType" layoutX="65.0" layoutY="74.0" />
+      <TextField fx:id="loca" layoutX="96.0" layoutY="108.0" prefHeight="25.0" prefWidth="117.0" />
+      <Button fx:id="confirmButton" layoutX="88.0" layoutY="189.0" mnemonicParsing="false" onAction="#editConfirm" text="Confirm" />
+      <DatePicker fx:id="time" layoutX="65.0" layoutY="142.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="121.0" layoutY="25.0" text="Name cannot be changed." textFill="#7d7d7d">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
